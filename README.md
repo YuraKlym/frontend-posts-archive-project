@@ -3,9 +3,6 @@ Frontend test assignment with post filtering, date range picker, view switcher, 
 
 Верстка профілю з перемиканням **List View** / **Grid View** за макетами Figma.
 
-
-Відкрийте адресу з термінала (зазвичай http://localhost:3000).
-
 ## Структура
 
 - `index.html` — семантична розмітка
