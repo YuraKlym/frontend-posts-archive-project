@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>monblanproject</title>
+    <meta name="description" content="monblanproject - профіль з перемиканням List/Grid View" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-heart" viewBox="0 0 18 18">
+        <path
+          d="M9 15.75l-1.05-0.95C3.9 11.61 1.5 9.39 1.5 6.75 1.5 4.68 3.18 3 5.25 3c1.17 0 2.29.55 3 1.41C9.46 3.55 10.58 3 11.75 3 13.82 3 15.5 4.68 15.5 6.75c0 2.64-2.4 4.86-6.45 8.05L9 15.75z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="icon-comment" viewBox="0 0 18 18">
+        <path
+          d="M15 3H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h2v3l3.5-3H15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 10h-4.17L7 15.17V13H3V5h12v8z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path
+          d="M7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM5 4h1V2h2v2h8V2h2v2h1c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 16h14V9H5v11z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="M18.3 5.71L12 12.01l-6.29-6.3-1.41 1.42 6.29 6.29-6.29 6.29 1.41 1.42 6.29-6.3 6.3 6.3 1.41-1.42-6.3-6.29 6.3-6.29z" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path
+          d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6-1.41 1.41zm6 0L12.18 12l-4.59 4.59L13 18l6-6-6-6-1.41 1.41z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <div class="page">
+     <img class="page__shape page__shape--left" src="assets/images/left-img.svg" alt="">
+    <img class="page__shape page__shape--right" src="assets/images/right-img.svg" alt="">
+
+      <header class="profile-header">
+  <div class="profile-header__canvas">
+
+    <img
+      class="profile-header__logo"
+      src="assets/images/logo.png"
+      width="138"
+      height="138"
+      alt=""
+    />
+
+    <div class="profile-header__content">
+
+      <div class="profile-header__top">
+        <h1 class="profile-header__title">monblanproject</h1>
+
+        <button type="button" class="profile-header__subscribe">
+          Start on 17-02-2016
+        </button>
+      </div>
+
+      <ul class="profile-header__stats">
+        <li><strong>870</strong> posts</li>
+        <li><strong>11,787</strong> followers</li>
+        <li><strong>112</strong> following</li>
+      </ul>
+
+      <div class="profile-header__filters">
+        <span class="profile-header__filters-label">Date</span>
+
+        <div class="date-field date-field--from">
+              <input
+                type="text"
+                class="date-field__input"
+                id="date-from"
+                value="09/08/2016"
+                placeholder="dd/mm/yyyy"
+                aria-label="Дата від"
+                readonly
+              />
+              <button
+                type="button"
+                class="date-field__addon date-field__addon--close"
+                aria-label="Очистити дату від"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="#icon-close"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="date-field__addon date-field__addon--calendar"
+                data-datepicker="from"
+                aria-label="Відкрити календар для дати від"
+                aria-expanded="false"
+                aria-controls="calendar-popup"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="#icon-calendar"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="date-field date-field--to">
+              <input
+                type="text"
+                class="date-field__input"
+                id="date-to"
+                value="09/08/2016"
+                placeholder="dd/mm/yyyy"
+                aria-label="Дата до"
+                readonly
+              />
+              <button
+                type="button"
+                class="date-field__addon date-field__addon--close"
+                aria-label="Очистити дату до"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="#icon-close"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="date-field__addon date-field__addon--calendar"
+                data-datepicker="to"
+                aria-label="Відкрити календар для дати до"
+                aria-expanded="false"
+                aria-controls="calendar-popup"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="#icon-calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="calendar-popup"
+            class="calendar-popup"
+            role="dialog"
+            aria-label="Календар"
+            aria-hidden="true"
+          >
+            <div class="calendar-popup__header">
+              <button
+                type="button"
+                class="calendar-popup__nav"
+                id="calendar-prev"
+                aria-label="Попередній місяць"
+              >
+                <svg width="14" height="14" aria-hidden="true">
+                  <use href="#icon-chevron-right"></use>
+                </svg>
+              </button>
+              <p class="calendar-popup__title" id="calendar-month-label">
+                December 2016
+              </p>
+              <button
+                type="button"
+                class="calendar-popup__nav calendar-popup__nav--next"
+                id="calendar-next"
+                aria-label="Наступний місяць"
+              >
+                <svg width="14" height="14" aria-hidden="true">
+                  <use href="#icon-chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="calendar-popup__weekdays">
+              <span>Su</span><span>Mo</span><span>Tu</span><span>We</span
+              ><span>Th</span><span>Fr</span><span>Sa</span>
+            </div>
+            <div class="calendar-popup__days" id="calendar-days"></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div
+          class="view-toggle"
+          role="group"
+          aria-label="Режим відображення записів"
+        >
+          <button
+            type="button"
+            class="view-toggle__btn view-toggle__btn--grid"
+            data-view="grid"
+            aria-pressed="false"
+            aria-label="Сітка"
+          >
+            <span class="view-toggle__grid" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="view-toggle__btn view-toggle__btn--list is-active"
+            data-view="list"
+            aria-pressed="true"
+            aria-label="Список"
+          >
+            <span class="view-toggle__list" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="posts posts--list" id="posts-container" data-view="list">
+          <!-- rendered by JS -->
+        </div>
+
+        <div class="load-more-wrap">
+          <button type="button" id="load-more" class="load-more">LOAD MORE</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
