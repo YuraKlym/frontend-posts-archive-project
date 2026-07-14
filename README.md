@@ -1,4 +1,4 @@
-# frontend-test-assignment
+# frontend-posts-archive
 Frontend test assignment with post filtering, date range picker, view switcher, and load more functionality.
 
 Верстка профілю з перемиканням **List View** / **Grid View** за макетами Figma.
